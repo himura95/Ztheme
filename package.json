@@ -1,0 +1,19 @@
+{
+    "name": "Ztheme",
+    "version": "0.1.0",
+    "description": "Un outil de création de thèmes pour Z-spin",
+    "main": "./html/index.html",
+    "window": {
+        "title": "Ztheme",
+        "frame": true,
+        "resizable": false,
+        "width": 1300,
+        "height": 600,  
+        "toolbar": true,
+	   "show": true,
+	   "icon": "./img/logo.png"
+    },
+    "dependencies": {
+    },
+    "license": "HFS"
+}

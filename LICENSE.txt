@@ -1,0 +1,24 @@
+Ztheme is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+If you want to sell Ztheme installed on some hardware (commercial use), contact me at this email address: himura95@hotmail.com
+I will give you a proper license for that.
+
+Summary of the actual CC-BY-NC-SA 4.0 License:
+
+YOU CAN:
+  Distribute
+  Modify
+  Rename
+
+YOU CAN'T:
+  Commercial use
+  Sublicense
+  Place Warranty
+  Hold Liable
+
+YOU MUST:
+  Give credit
+  Include copyright
+  State changes
+
+Full text available at: http://creativecommons.org/licenses/by-nc-sa/4.0/

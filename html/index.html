@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<link rel="stylesheet" href="../css/screen.css">
+<link rel="stylesheet" href="../css/animate.css">   
+<script src="../js/fabric.js"></script>
+<script src="../js/jszip.js"></script>        
+<script src="../js/main.js"></script>
+<script src="../js/FileSaver.js"></script>       
+
+<body>
+
+<div id="zoneParametres">
+<center><input class="input-file" onchange="importation()" id="my-file" type="file">
+<label for="my-file" class="input-file-trigger" tabindex="0">Importer un element</label></center><BR>
+Elements : <select id = "listeElements" onchange="changeElement()"></select></BR><BR>
+<center><input type="button" value="Devant" onclick=enAvant() id="devant"><input type="button" value="Au fond" onclick=enArriere() id="auFond"></center></BR><BR>
+Animation : <select id = "listeAnimations" onchange="changeAnimation()"></select>
+</div>
+
+<div id="zoneCanvas">  
+<canvas id="Canvas" width="960" height="540">
+</canvas>
+<video height="240" width="320" id="video1" style="display: none">
+<source src="../resultat/video.mp4">
+</video>
+</div>
+ 
+<div id="zoneOptions">
+Delai : <input type="texte" id= "delai" value="1000">
+Duree : <input type="texte" id= "duree" value="1000">
+Opacite : <input type="range" name="opacite" id="opacite" min="0" max="1" value="1" step="0.1" onchange="changeOpacite()">
+<input type="texte" id= "nomRom" value="NomDeLaRom" id="nomRom">
+<input type="button" value="Sauvegarder" onclick="creationZip()" id="sauvegarde">
+</div>
+    
+<script>
+var fs = require('fs');
+<!-- variable pour ID element -->
+var index = 1;
+fs.createReadStream('./template/index.html').pipe(fs.createWriteStream('./resultat/index.html'));
+fs.createReadStream('./css/animate.css').pipe(fs.createWriteStream('./resultat/animate.css'));
+<!-- Création du canvas -->
+var canvas = new fabric.Canvas('Canvas');
+</script>
+        
+</body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

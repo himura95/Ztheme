@@ -1,0 +1,83 @@
+body {
+    background-color:#eeeeee;
+    margin: 0 auto;
+}
+
+/* styles du panneau gauche */
+#zoneParametres {
+    position: absolute;
+	top: 10px;
+	left: 10px;
+    line-height:30px;
+    background-color:#eeeeee;
+    float:left;
+    clear: both;
+}
+
+#zoneCanvas {
+    border: 1px solid black;
+    position: absolute;
+	top: 5px;
+	right: 5px;
+    background-color:#bbbbbb;
+    float:right;
+    overflow: hidden;
+}
+
+/* styles du panneau bas */
+#zoneOptions {
+    width:1290px;
+    position: absolute;
+	bottom: 1px;
+	left: 10px;
+    line-height:30px;
+    background-color:#eeeeee;
+    float:right;
+    clear:both;
+}
+
+/* styles du boutton importer un element */
+.js .input-file-trigger {
+  display: block;
+  width: 315px;
+  background: #39D2B4;
+  color: #fff;
+  font-size: 1.4em;
+  transition: all .4s;
+  cursor: pointer;
+}
+.js .input-file {
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* quelques styles d'interactions */
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+  background: #34495E;
+  color: #39D2B4;
+}
+
+#devant {
+    float:left;
+    margin-left: 50px;
+}
+
+#auFond {
+    float:right;
+    margin-right: 50px;
+}
+
+#nomRom {
+    margin-left:325px;
+}
+
+#sauvegarde {
+    float:right;
+    margin-right: 25px;
+}
+
