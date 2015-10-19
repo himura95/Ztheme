@@ -91,6 +91,27 @@ function creationZip() {
                 if (objetSource == "video1"){
                     appliquer += array[i] + "\n" + "<video src=\"video.mp4\" class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\" autoplay loop></video>\n";
                 }
+                else if (objetSource == "artwork1"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork1.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
+                else if (objetSource == "artwork2"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork2.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
+                else if (objetSource == "artwork3"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork3.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
+                else if (objetSource == "artwork4"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork4.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
+                else if (objetSource == "artwork5"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork5.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
+                else if (objetSource == "artwork6"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork6.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
+                else if (objetSource == "artwork7"){
+                    appliquer += array[i] + "\n" + "<img src=\"Artwork7.png class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
+                }
                 else {
                     appliquer += array[i] + "\n" + "<img src=\"" + objetSource.slice(objetSource.lastIndexOf("/")+1,objetSource.length) + "\" class=\"classe" + objetId + " " + objetAnimation + " animated speed-"+ objetDuree + "s delay-" + objetDelai + "s\">\n";
                 }
@@ -113,6 +134,28 @@ function creationZip() {
 function changeElement() {
     var select = document.getElementById("listeElements");
     canvas.setActiveObject(canvas.item(select.selectedIndex));
+}
+
+function numeroArtwork(){
+    var nArtwork = document.getElementsByName('artwork');
+    for ( var i = 0; i < nArtwork.length; i++) {
+        if(nArtwork[i].checked) {
+            activeObject = canvas.getActiveObject();
+            activeObject.set('src', nArtwork[i].value);
+            break;
+        }
+    }
+}
+
+function sens(){
+    var direction = document.getElementsByName('sens');
+    for ( var i = 0; i < direction.length; i++) {
+        if(nArtwork[i].checked) {
+            activeObject = canvas.getActiveObject();
+            activeObject.set('sens', direction[i].value);
+            break;
+        }
+    }
 }
 
 // Choix de l'animation
