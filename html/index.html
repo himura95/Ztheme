@@ -13,8 +13,21 @@
 <div id="zoneParametres">
 <center><input class="input-file" onchange="importation()" id="my-file" type="file">
 <label for="my-file" class="input-file-trigger" tabindex="0">Importer un element</label></center><BR>
-Elements : <select id = "listeElements" onchange="changeElement()"></select></BR><BR>
-<center><input type="button" value="Devant" onclick=enAvant() id="devant"><input type="button" value="Au fond" onclick=enArriere() id="auFond"></center></BR><BR>
+Elements : <select id = "listeElements" onchange="changeElement()"></select><BR>
+<center><input type="button" value="Devant" onclick=enAvant() id="devant"><input type="button" value="Au fond" onclick=enArriere() id="auFond"></center></BR><hr>
+Artwork :
+<input type="radio" name="artwork" value="artwork1" onclick="numeroArtwork()">1
+<input type="radio" name="artwork" value="artwork2" onclick="numeroArtwork()">2
+<input type="radio" name="artwork" value="artwork3" onclick="numeroArtwork()">3
+<input type="radio" name="artwork" value="artwork4" onclick="numeroArtwork()">4
+<input type="radio" name="artwork" value="artwork5" onclick="numeroArtwork()">5
+<input type="radio" name="artwork" value="artwork6" onclick="numeroArtwork()">6
+<input type="radio" name="artwork" value="artwork7" onclick="numeroArtwork()">7<BR><hr>
+Sens d'apparition/disparition :<BR>
+<input type="radio" name="sens" value="haut" onclick="sens()">Haut
+<input type="radio" name="sens" value="bas" onclick="sens()">Bas
+<input type="radio" name="sens" value="droite" onclick="sens()">Droite
+<input type="radio" name="sens" value="gauche" onclick="sens()">Gauche<BR><hr>
 Animation : <select id = "listeAnimations" onchange="changeAnimation()"></select>
 </div>
 
@@ -25,15 +38,15 @@ Animation : <select id = "listeAnimations" onchange="changeAnimation()"></select
 <source src="../resultat/video.mp4">
 </video>
 </div>
- 
+
 <div id="zoneOptions">
-Delai : <input type="texte" id= "delai" value="1000">
-Duree : <input type="texte" id= "duree" value="1000">
+Delai : <input type="texte" id= "delai" value="10">
+Duree : <input type="texte" id= "duree" value="10">
 Opacite : <input type="range" name="opacite" id="opacite" min="0" max="1" value="1" step="0.1" onchange="changeOpacite()">
 <input type="texte" id= "nomRom" value="NomDeLaRom" id="nomRom">
 <input type="button" value="Sauvegarder" onclick="creationZip()" id="sauvegarde">
 </div>
-    
+
 <script>
 var fs = require('fs');
 <!-- variable pour ID element -->
@@ -43,20 +56,7 @@ fs.createReadStream('./css/animate.css').pipe(fs.createWriteStream('./resultat/a
 <!-- Création du canvas -->
 var canvas = new fabric.Canvas('Canvas');
 </script>
-        
+
 </body>
-    
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
