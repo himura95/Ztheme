@@ -9,7 +9,7 @@
         "resizable": false,
         "width": 1300,
         "height": 600,  
-        "toolbar": true,
+        "toolbar": false,
 	   "show": true,
 	   "icon": "./img/logo.png"
     },
